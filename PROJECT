@@ -1,0 +1,6 @@
+domain: webofmars.com
+layout:
+- go.kubebuilder.io/v3
+projectName: src
+repo: webofmars.com/pizza
+version: "3"
