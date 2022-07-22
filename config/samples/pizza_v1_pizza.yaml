@@ -1,0 +1,6 @@
+apiVersion: pizza.webofmars.com/v1
+kind: Pizza
+metadata:
+  name: pizza-sample
+spec:
+  # TODO(user): Add fields here

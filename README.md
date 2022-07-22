@@ -30,3 +30,11 @@ asdf install
 ```console
 kubebuilder init --domain webofmars.com --repo webofmars.com/pizza
 ```
+
+## create CRDs (step 2)
+
+```console
+kubebuilder create api --group pizza --version v1 --kind Pizza
+go mod tidy
+make generate
+```

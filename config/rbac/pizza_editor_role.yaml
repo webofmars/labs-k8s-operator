@@ -1,0 +1,24 @@
+# permissions for end users to edit pizzas.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: pizza-editor-role
+rules:
+- apiGroups:
+  - pizza.webofmars.com
+  resources:
+  - pizzas
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - pizza.webofmars.com
+  resources:
+  - pizzas/status
+  verbs:
+  - get
