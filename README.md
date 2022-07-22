@@ -4,6 +4,8 @@
 
 based on <https://betterprogramming.pub/build-a-kubernetes-operator-in-10-minutes-11eec1492d30>
 
+_Note: this repo is part of webofmars labs project. You can check other labs here <https://github.com/webofmars/labs>.
+
 ## requirements
 
 * go version v1.17.9+
