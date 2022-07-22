@@ -61,3 +61,11 @@ NB: you need a working kubectl connected to your dev cluster in order to test it
 make install
 kubectl get crds
 ```
+
+## run the controller (step 7)
+
+Run the controller locally (it can later be packaged through helm or other means and run in a the kubernetes cluster).
+
+```console
+make run
+```
