@@ -69,3 +69,13 @@ Run the controller locally (it can later be packaged through helm or other means
 ```console
 make run
 ```
+
+## create your first pizza (step 8)
+
+* edit file `config/samples/pizza_v1_pizza.yaml` to match a valid pizza spec as defined in `pizza_types.go`
+
+```console
+kubectl apply -f config/samples/pizza_v1_pizza.yaml
+```
+
+after a while you should see the controller reconcile loop pass over the pizza object and modify it if you instructed to do so in the controller (check step 4 code)
