@@ -62,14 +62,14 @@ func (r *PizzaReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl
 
 	// Update delivery status
 	pizza.Status.Delivered = true
-	if err := r.Status().Update(ctx, &foo); err != nil {
+	if err := r.Status().Update(ctx, &pizza); err != nil {
 		log.Log.Error(err, "unable to update pizza delivered status", "status", true)
 		return ctrl.Result{}, err
 	}
 	log.Log.Info("pizza delivered status updated", "status", true)
 
 	// end of logic
-	
+
 	log.Log.Info("pizza custom resource reconciled")
 	return ctrl.Result{}, nil
 }
