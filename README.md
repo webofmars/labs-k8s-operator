@@ -80,7 +80,7 @@ kubectl apply -f config/samples/pizza_v1_pizza.yaml
 
 after a while you should see the controller reconcile loop pass over the pizza object and modify it if you instructed to do so in the controller (check step 4 code)
 
-## package the controller
+## package the controller (step 9)
 
 ```console
 make docker-build
