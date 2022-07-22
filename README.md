@@ -46,3 +46,9 @@ make generate
 ## customize the controller (step 4)
 
 * edit the file `controllers/pizza_controller.go` and inseert your own logic for a pizza
+
+## generate the manifests (step 5)
+
+```console
+make manifests
+```
