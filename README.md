@@ -42,3 +42,7 @@ make generate
 ## customize CRDs (step 3)
 
 * edit the file `api/v1/pizza_types.go`
+
+## customize the controller (step 4)
+
+* edit the file `controllers/pizza_controller.go` and inseert your own logic for a pizza

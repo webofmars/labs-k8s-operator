@@ -18,6 +18,7 @@ package controllers
 
 import (
 	"context"
+	"time"
 
 	"k8s.io/apimachinery/pkg/runtime"
 	ctrl "sigs.k8s.io/controller-runtime"
@@ -49,8 +50,27 @@ type PizzaReconciler struct {
 func (r *PizzaReconciler) Reconcile(ctx context.Context, req ctrl.Request) (ctrl.Result, error) {
 	_ = log.FromContext(ctx)
 
-	// TODO(user): your logic here
+	// Pizza delivery logic goes here
+	var pizza pizzav1.Pizza
+	if err := r.Get(ctx, req.NamespacedName, &pizza); err != nil {
+		log.Log.Error(err, "unable to fetch Foo")
+		return ctrl.Result{}, client.IgnoreNotFound(err)
+	}
 
+	// fake the delivery
+	time.Sleep(60 * time.Second)
+
+	// Update delivery status
+	pizza.Status.Delivered = true
+	if err := r.Status().Update(ctx, &foo); err != nil {
+		log.Log.Error(err, "unable to update pizza delivered status", "status", true)
+		return ctrl.Result{}, err
+	}
+	log.Log.Info("pizza delivered status updated", "status", true)
+
+	// end of logic
+	
+	log.Log.Info("pizza custom resource reconciled")
 	return ctrl.Result{}, nil
 }
 
