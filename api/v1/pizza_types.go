@@ -28,14 +28,15 @@ type PizzaSpec struct {
 	// INSERT ADDITIONAL SPEC FIELDS - desired state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
 
-	// Foo is an example field of Pizza. Edit pizza_types.go to remove/update
-	Foo string `json:"foo,omitempty"`
+	// Base is an example field of Pizza. Edit pizza_types.go to remove/update
+	Base string `json:"base"`
 }
 
 // PizzaStatus defines the observed state of Pizza
 type PizzaStatus struct {
 	// INSERT ADDITIONAL STATUS FIELD - define observed state of cluster
 	// Important: Run "make" to regenerate code after modifying this file
+	Delivered bool `json:"Delivered,omitempty"`
 }
 
 //+kubebuilder:object:root=true

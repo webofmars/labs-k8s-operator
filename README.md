@@ -38,3 +38,7 @@ kubebuilder create api --group pizza --version v1 --kind Pizza
 go mod tidy
 make generate
 ```
+
+## customize CRDs (step 3)
+
+* edit the file `api/v1/pizza_types.go`
