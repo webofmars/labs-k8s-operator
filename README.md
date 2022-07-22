@@ -52,3 +52,12 @@ make generate
 ```console
 make manifests
 ```
+
+## install the CRDs (step 6)
+
+NB: you need a working kubectl connected to your dev cluster in order to test it.
+
+```console
+make install
+kubectl get crds
+```
