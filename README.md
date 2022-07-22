@@ -4,7 +4,7 @@
 
 based on <https://betterprogramming.pub/build-a-kubernetes-operator-in-10-minutes-11eec1492d30>
 
-_Note: this repo is part of webofmars labs project. You can check other labs here <https://github.com/webofmars/labs>.
+_Note: this repo is part of webofmars labs project. You can check other labs here <https://github.com/webofmars/labs>._
 
 ## requirements
 
